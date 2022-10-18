@@ -1,0 +1,21 @@
+---
+- name: ACI Link Level Management
+  hosts: APIC
+  connection: local
+  gather_facts: no
+  vars:
+    username: pandapa
+    password: cisco!123
+
+  tasks:
+     - name: Add a new tenant
+       cisco.aci.aci_tenant:
+         host: 10.106.236.54
+         username: pandapa
+         password: cisco!123
+         tenant: anshul_ansible
+         description: anshul_ansible
+         state: present
+         validate_certs: no         
+       delegate_to: localhost  
+  
