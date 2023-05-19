@@ -4,8 +4,8 @@
   connection: local
   gather_facts: no
   vars:
-    username: pandapa
-    password: cisco!123
+    username: user
+    password: password
 
   tasks:
      - name: Add a new tenant
